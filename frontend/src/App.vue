@@ -22,13 +22,13 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--spacing-lg);
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   max-width: 100vw;
-  padding: 40px;
-  background: #e7efff;
+  padding: var(--spacing-xl);
+  background: var(--color-bg-primary);
 
   &>.container {
     width: 1400px;
@@ -39,45 +39,47 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
 
     .logo {
-      font-size: 1.6rem;
+      font-size: var(--font-size-lg);
       font-weight: bold;
+      color: var(--color-logo);
     }
 
     .actions {
       margin-left: auto;
+      color: var(--color-action);
     }
   }
 
   &>main {
     box-sizing: border-box;
     flex: 1 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
+    padding: var(--spacing-lg);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 20px;
+    gap: var(--spacing-lg);
 
     @media (max-width: 1200px) {
       grid-template-columns: repeat(8, minmax(0, 1fr));
-      gap: 16px;
+      gap: var(--spacing-md);
     }
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
+      gap: var(--spacing-sm);
     }
 
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
-      gap: 8px;
+      gap: var(--spacing-xs);
     }
 
     &>.block-sm {
@@ -98,13 +100,14 @@
 
     &>div {
       box-sizing: border-box;
-      padding: 20px;
-      background: #ffe1e1;
-      border-radius: 8px;
+      padding: var(--spacing-lg);
+      background: var(--color-bg-accent);
+      border-radius: var(--radius-md);
       display: grid;
       place-items: center;
-      font-size: 1.2rem;
+      font-size: var(--font-size-md);
       font-weight: bold;
+      color: var(--color-text-primary);
 
       @media (max-width: 768px) {
         grid-column: span 4 !important;
