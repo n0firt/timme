@@ -1,8 +1,10 @@
 import 'modern-normalize/modern-normalize.css'
+import 'primeicons/primeicons.css'
+import '@/assets/styles/main.scss'
 import { createApp } from 'vue'
 import App from './App.vue'
 import PrimeVue from 'primevue/config'
-import Material from '@primeuix/themes/aura'
+import Aura from '@primeuix/themes/aura'
 import Button from 'primevue/button'
 import DatePicker from 'primevue/datepicker'
 import Textarea from 'primevue/textarea'
@@ -25,13 +27,18 @@ import Badge from 'primevue/badge'
 import OverlayBadge from 'primevue/overlaybadge'
 import Fluid from 'primevue/fluid'
 import Inplace from 'primevue/inplace'
+import Toolbar from 'primevue/toolbar'
+import Skeleton from 'primevue/skeleton'
+import Tag from 'primevue/tag'
+import Menu from 'primevue/menu'
 
 const app = createApp(App)
 
 app.use(PrimeVue, {
   theme: {
-    preset: Material,
+    preset: Aura,
   },
+  ripple: true,
 })
 app.use(ToastService)
 
@@ -56,5 +63,9 @@ app.component('PVBadge', Badge)
 app.component('PVOverlayBadge', OverlayBadge)
 app.component('PVFluid', Fluid)
 app.component('PVInplace', Inplace)
+app.component('PVToolbar', Toolbar)
+app.component('PVSkeleton', Skeleton)
+app.component('PVTag', Tag)
+app.component('PVMenu', Menu)
 
 app.mount('#app')
